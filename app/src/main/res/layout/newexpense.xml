@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="280dp"
+        android:layout_height="450dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:id="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/green"
+            android:text="@string/add_expense_header"
+            />
+
+        <EditText
+
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:inputType="textMultiLine|textCapSentences"
+            android:ems="10"
+            android:id="@+id/description"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/amount"
+            android:layout_alignEnd="@+id/amount"
+            android:layout_marginTop="30dp"
+            android:hint="@string/description"
+            android:textSize="20sp"
+            android:background="@drawable/edittext"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:digits="0123456789."
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/amount"
+            android:hint="@string/amount"
+            android:textSize="20sp"
+            android:background="@drawable/edittext"
+            android:layout_below="@+id/description"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:inputType="date"
+            android:id="@+id/datePicker"
+            android:hint="@string/date"
+            android:textSize="20sp"
+            android:ems="10"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/amount"
+            android:layout_alignStart="@+id/amount"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/edittext"
+            android:gravity="center"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            android:id="@+id/add_expense_btn"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:background="@drawable/greenbutton"
+            android:allowUndo="false" />
+
+    </LinearLayout>
+
+</RelativeLayout>
